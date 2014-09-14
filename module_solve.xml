@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_solve" default="compile.module.solve">
+  <dirname property="module.solve.basedir" file="${ant.file.module_solve}"/>
+  
+  <property name="module.jdk.home.solve" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.solve" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.solve" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.solve" value="${compiler.args}"/>
+  
+  <property name="solve.output.dir" value="${module.solve.basedir}/out/production/Solve"/>
+  <property name="solve.testoutput.dir" value="${module.solve.basedir}/out/test/Solve"/>
+  
+  <path id="solve.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="solve.module.production.classpath">
+    <path refid="${module.jdk.classpath.solve}"/>
+  </path>
+  
+  <path id="solve.runtime.production.module.classpath">
+    <pathelement location="${solve.output.dir}"/>
+  </path>
+  
+  <path id="solve.module.classpath">
+    <path refid="${module.jdk.classpath.solve}"/>
+    <pathelement location="${solve.output.dir}"/>
+  </path>
+  
+  <path id="solve.runtime.module.classpath">
+    <pathelement location="${solve.testoutput.dir}"/>
+    <pathelement location="${solve.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.solve">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.solve">
+    <patternset refid="excluded.from.module.solve"/>
+  </patternset>
+  
+  <path id="solve.module.sourcepath">
+    <dirset dir="${module.solve.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.solve" depends="compile.module.solve.production,compile.module.solve.tests" description="Compile module Solve"/>
+  
+  <target name="compile.module.solve.production" depends="register.custom.compilers" description="Compile module Solve; production classes">
+    <mkdir dir="${solve.output.dir}"/>
+    <javac2 destdir="${solve.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.solve}/javac">
+      <compilerarg line="${compiler.args.solve}"/>
+      <bootclasspath refid="solve.module.bootclasspath"/>
+      <classpath refid="solve.module.production.classpath"/>
+      <src refid="solve.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.solve"/>
+    </javac2>
+    
+    <copy todir="${solve.output.dir}">
+      <fileset dir="${module.solve.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.solve.tests" depends="register.custom.compilers,compile.module.solve.production" description="compile module Solve; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.solve" description="cleanup module">
+    <delete dir="${solve.output.dir}"/>
+    <delete dir="${solve.testoutput.dir}"/>
+  </target>
+</project>
