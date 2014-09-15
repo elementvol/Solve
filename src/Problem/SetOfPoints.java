@@ -34,7 +34,7 @@ public class SetOfPoints {
                         break; }
                      }
                      if (!match) {
-                     list.add(new Triangle(this.list.get(i),this.list.get(j),this.list.get(k))); }
+                     list.add(triangle);
 
 
                  }
@@ -43,6 +43,7 @@ public class SetOfPoints {
 
 
             }
+          }
         }
     return list;
     }

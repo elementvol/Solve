@@ -8,7 +8,8 @@
     </list>
     <ignored path="Problem.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="bc33f11e-196f-41d1-a571-55085d1f911d" time="1410811451125" ignored="false" />
+    <file path="/Dummy.txt" changelist="bc33f11e-196f-41d1-a571-55085d1f911d" time="1410811478953" ignored="false" />
+    <file path="$PROJECT_DIR$/../../.idea/workspace.xml" changelist="bc33f11e-196f-41d1-a571-55085d1f911d" time="1410811553046" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +82,7 @@
       <file leaf-file-name="Solution.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="21" selection-start="2239" selection-end="2239" vertical-scroll-proportion="0.61388886">
+            <state line="66" column="32" selection-start="2250" selection-end="2250" vertical-scroll-proportion="1.7472222">
               <folding />
             </state>
           </provider>
@@ -396,6 +397,10 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/SetOfPoints.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -406,7 +411,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="21" selection-start="2239" selection-end="2239" vertical-scroll-proportion="0.61388886">
+        <state line="66" column="32" selection-start="2250" selection-end="2250" vertical-scroll-proportion="1.7472222">
           <folding />
         </state>
       </provider>

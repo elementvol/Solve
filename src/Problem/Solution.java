@@ -3,6 +3,8 @@ package Problem;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 
 /**
@@ -17,7 +19,7 @@ public class Solution {
          BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
          ArrayList<Point>list = new ArrayList<Point>();
          ArrayList<Triangle> triangles = new ArrayList<Triangle>();
-         String inX,inY;
+      /*   String inX,inY;
          while(true)
          {
              inX=r.readLine();
@@ -29,7 +31,12 @@ public class Solution {
              }
 
 
-         }
+         } */
+        for(int i = 0 ; i < (int)(Math.random()*10+15);i++)
+        {
+          list.add  ( new Point(new BigDecimal(Math.random()*11 - 5).setScale(1, RoundingMode.UP).doubleValue(),new BigDecimal(Math.random()*11 - 5).setScale(1,RoundingMode.UP).doubleValue()));
+        }
+
          for (Point point :list)
          {
              System.out.println(point);
@@ -42,6 +49,7 @@ public class Solution {
            maxCountOfPointsConsists(triangles,list);
            r.readLine();
            r.close();
+
 
        // System.out.println(new Triangle(new Point(1,1),new Point(1,2),new Point (3,2)).consistsPoint(new Point(3,1)));
        }
@@ -56,7 +64,7 @@ public class Solution {
                   indexOfTriangle = i;
               }
            }
-           System.out.println(triangles.get(indexOfTriangle)+" Count of points inside: "+maxCount);
+           System.out.println("Maximum of points consists: "+triangles.get(indexOfTriangle)+" Count of points inside: "+maxCount);
 
 
 
