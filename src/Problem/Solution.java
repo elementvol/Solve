@@ -47,7 +47,7 @@ public class Solution {
        }
       public static void maxCountOfPointsConsists(ArrayList<Triangle> triangles , ArrayList<Point> points)
        {
-           Triangle a;
+
            int maxCount=triangles.get(0).pointsInside(points);
            int indexOfTriangle=0;
            for (int i = 1 ; i < triangles.size(); i++)
