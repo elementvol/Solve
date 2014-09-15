@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc33f11e-196f-41d1-a571-55085d1f911d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SetOfPoints.java" afterPath="$PROJECT_DIR$/SetOfPoints.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Solution.java" afterPath="$PROJECT_DIR$/Solution.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Problem.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="bc33f11e-196f-41d1-a571-55085d1f911d" time="1410810857640" ignored="false" />
+    <file path="/Dummy.txt" changelist="bc33f11e-196f-41d1-a571-55085d1f911d" time="1410811451125" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +81,7 @@
       <file leaf-file-name="Solution.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="25" selection-start="633" selection-end="633" vertical-scroll-proportion="-1.3222222">
+            <state line="66" column="21" selection-start="2239" selection-end="2239" vertical-scroll-proportion="0.61388886">
               <folding />
             </state>
           </provider>
@@ -405,7 +406,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="25" selection-start="633" selection-end="633" vertical-scroll-proportion="-1.3222222">
+        <state line="66" column="21" selection-start="2239" selection-end="2239" vertical-scroll-proportion="0.61388886">
           <folding />
         </state>
       </provider>
