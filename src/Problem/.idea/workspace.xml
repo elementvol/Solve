@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc33f11e-196f-41d1-a571-55085d1f911d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SetOfPoints.java" afterPath="$PROJECT_DIR$/SetOfPoints.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Solution.java" afterPath="$PROJECT_DIR$/Solution.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Problem.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="bc33f11e-196f-41d1-a571-55085d1f911d" time="1410811478953" ignored="false" />
-    <file path="$PROJECT_DIR$/../../.idea/workspace.xml" changelist="bc33f11e-196f-41d1-a571-55085d1f911d" time="1410811553046" ignored="false" />
+    <file path="/Dummy.txt" changelist="bc33f11e-196f-41d1-a571-55085d1f911d" time="1410811794281" ignored="false" />
+    <file path="$PROJECT_DIR$/../../.idea/workspace.xml" changelist="bc33f11e-196f-41d1-a571-55085d1f911d" time="1410811852000" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +80,7 @@
       <file leaf-file-name="Solution.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="32" selection-start="2250" selection-end="2250" vertical-scroll-proportion="1.7472222">
+            <state line="45" column="41" selection-start="1467" selection-end="1467" vertical-scroll-proportion="1.8888888">
               <folding />
             </state>
           </provider>
@@ -307,7 +305,11 @@
       <created>1410805330203</created>
       <updated>1410805330203</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="upd">
+      <created>1410811816296</created>
+      <updated>1410811816296</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -411,7 +413,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="32" selection-start="2250" selection-end="2250" vertical-scroll-proportion="1.7472222">
+        <state line="45" column="41" selection-start="1467" selection-end="1467" vertical-scroll-proportion="1.8888888">
           <folding />
         </state>
       </provider>
