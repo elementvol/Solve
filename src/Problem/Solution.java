@@ -33,7 +33,7 @@ public class Solution {
 
 
          } */
-        for(int i = 0 ; i < /*(int)(Math.random()*10+15)*/10;i++)
+        for(int i = 0 ; i < /*(int)(Math.random()*10+15)*/4;i++)
         {
           list.add  ( new Point(new BigDecimal(Math.random()*11 - 5).setScale(1, RoundingMode.UP).doubleValue(),new BigDecimal(Math.random()*11 - 5).setScale(1,RoundingMode.UP).doubleValue()));
         }
@@ -48,7 +48,7 @@ public class Solution {
              System.out.println(triangle);
          }
            maxCountOfPointsConsists(triangles,list);
-           new Draw(triangles,1280,1024);
+           new Draw(triangles,500,500);
            r.readLine();
            r.close();
 
