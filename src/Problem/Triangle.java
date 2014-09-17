@@ -10,9 +10,10 @@ import java.util.ArrayList;
  * To change this template use File | Settings | File Templates.
  */
 public class Triangle implements Figure {
-    Point a;
-    Point b;
-    Point c;
+    public static int COUNT_OF_VERTEX=3;
+    private Point a;
+    private Point b;
+    private Point c;
 
     public Triangle(Point a, Point b, Point c)
     {
@@ -27,9 +28,9 @@ public class Triangle implements Figure {
     public boolean consistsPoint(Point d)
     {
      double detA,detB,detC;
-     detA = (a.x-d.x)*(b.y-a.y)-(a.y-d.y)*(b.x-a.x);
-     detB = (b.x-d.x)*(c.y-b.y)-(b.y-d.y)*(c.x-b.x);
-     detC = (c.x-d.x)*(a.y-c.y)-(c.y-d.y)*(a.x-c.x);
+     detA = (a.getX()-d.getX())*(b.getY()-a.getY())-(a.getY()-d.getY())*(b.getX()-a.getX());
+     detB = (b.getX()-d.getX())*(c.getY()-b.getY())-(b.getY()-d.getY())*(c.getX()-b.getX());
+     detC = (c.getX()-d.getX())*(a.getY()-c.getY())-(c.getY()-d.getY())*(a.getX()-c.getX());
      if((detA>=0&detB>=0&detC>=0)|(detA<=0&detB<=0&detC<=0)) return true;
      else return false;
     }
@@ -80,5 +81,17 @@ public class Triangle implements Figure {
         result = 31 * result + b.hashCode();
         result = 31 * result + c.hashCode();
         return result;
+    }
+
+    public Point getA() {
+        return a;
+    }
+
+    public Point getB() {
+        return b;
+    }
+
+    public Point getC() {
+        return c;
     }
 }

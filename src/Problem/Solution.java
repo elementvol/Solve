@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
+import Draw.Draw;
 
 /**
  * Created with IntelliJ IDEA.
@@ -32,7 +33,7 @@ public class Solution {
 
 
          } */
-        for(int i = 0 ; i < (int)(Math.random()*10+15);i++)
+        for(int i = 0 ; i < /*(int)(Math.random()*10+15)*/10;i++)
         {
           list.add  ( new Point(new BigDecimal(Math.random()*11 - 5).setScale(1, RoundingMode.UP).doubleValue(),new BigDecimal(Math.random()*11 - 5).setScale(1,RoundingMode.UP).doubleValue()));
         }
@@ -47,8 +48,10 @@ public class Solution {
              System.out.println(triangle);
          }
            maxCountOfPointsConsists(triangles,list);
+           new Draw(triangles,1280,1024);
            r.readLine();
            r.close();
+
 
 
        // System.out.println(new Triangle(new Point(1,1),new Point(1,2),new Point (3,2)).consistsPoint(new Point(3,1)));

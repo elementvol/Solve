@@ -8,12 +8,13 @@ package Problem;
  * To change this template use File | Settings | File Templates.
  */
 public class Point {
-    double x;
-    double y;
+    private static double SCALE = 50;
+    private double x;
+    private double y;
     public Point(double x, double y)
     {
-        this.x = x;
-        this.y = y;
+        this.x = x*SCALE;
+        this.y = y*SCALE;
     }
     public static boolean POINTS_ON_LINE(Point a, Point b, Point c)
     {
@@ -47,7 +48,15 @@ public class Point {
 
     @Override
     public String toString() {
-        return "point(x= "+x +";" + "y="+ y+")";
+        return "point(x= "+x/SCALE +";" + "y="+ y/SCALE+")";
             //To change body of overridden methods use File | Settings | File Templates.
+    }
+
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
     }
 }
