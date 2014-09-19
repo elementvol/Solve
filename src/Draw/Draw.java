@@ -30,6 +30,7 @@ public class Draw extends JPanel {
         this.LENGTH_OF_FRAME = LENGTH_OF_FRAME;
         this.triangles = triangles;
         JFrame frame = new JFrame("Frame");
+      //  JPanel panel = new JPanel();
         frame.setLocation(500,500);
 
 
@@ -40,6 +41,10 @@ public class Draw extends JPanel {
         frame.setMaximumSize(new Dimension(this.WIDTH_OF_FRAME, this.LENGTH_OF_FRAME));
 
         frame.getContentPane().add(this);
+    //    frame.getContentPane().add(panel);
+      // this.setFocusPainted(false);
+       // this.setBorderPainted(false);
+       // this.setEnabled(false);
 
 
     }
@@ -47,11 +52,12 @@ public class Draw extends JPanel {
     @Override
     public void paintComponent(Graphics g) {
 
+       // super.paintComponent(g);
         Graphics2D g2 = (Graphics2D)g;
         g2.setColor(Color.BLACK);
-        g2.translate(WIDTH_OF_FRAME/2, LENGTH_OF_FRAME/2);
-        g2.drawLine(-WIDTH_OF_FRAME/2,0,WIDTH_OF_FRAME/2,0);
-        g2.drawLine(0,-LENGTH_OF_FRAME/2,0,LENGTH_OF_FRAME/2);
+        g2.translate(this.getWidth()/2, this.getHeight()/2);
+        g2.drawLine(-this.getWidth()/2,0,this.getWidth()/2,0);
+        g2.drawLine(0,-this.getHeight()/2,0,this.getHeight()/2);
         g2.drawOval(-20,-20,40,40);
         g2.setColor(Color.RED);
 
@@ -61,7 +67,7 @@ public class Draw extends JPanel {
         g2.draw(ellipse2D);
         GeneralPath polyline;
         g2.setColor(Color.RED);
-    /*    for(int i=0; i < triangles.size();i++ ){
+         for(int i=0; i < triangles.size();i++ ){
 
         polyline = new GeneralPath(GeneralPath.WIND_EVEN_ODD,Triangle.COUNT_OF_VERTEX);
         polyline.moveTo(triangles.get(i).getA().getX(),
@@ -75,12 +81,12 @@ public class Draw extends JPanel {
 
 
         polyline.closePath();
-        g2.draw(polyline);     */
+        g2.draw(polyline);
 
         }
+      }
 
-
-    }
+  }
 
 
 

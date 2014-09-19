@@ -19,7 +19,7 @@ public class Solution {
        public static  void main(String[] args) throws IOException {
          BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
          ArrayList<Point>list = new ArrayList<Point>();
-         ArrayList<Triangle> triangles = new ArrayList<Triangle>();
+         ArrayList<Triangle> triangles ;
       /*   String inX,inY;
          while(true)
          {

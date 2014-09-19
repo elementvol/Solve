@@ -13,23 +13,42 @@ import java.awt.event.ActionListener;
  * To change this template use File | Settings | File Templates.
  */
 public class MovingRectangle extends JPanel implements ActionListener{
-    Timer timer = new Timer(5,this);
-    int x=0,dx =1;
-    int y =0,dy =5;
+
+    Timer timer = new Timer(2,this);
+   boolean flag = false;
+    int x=0, stepX =1;
+    int y =0, stepY =5;
+    static Dimension dimension = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+    static int windowWidth = (int)dimension.getWidth()/5;
+    static int windowHeight =(int)dimension.getHeight()/5;
+
+
     public MovingRectangle() {
       JFrame frame= new JFrame("Frame");
+     // JPanel jPanel = new JPanel();
       frame.setVisible(true);
-      frame.setSize(500,500);
+      frame.setSize(windowWidth,windowHeight);
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+     // frame.getContentPane().add(jPanel);
       frame.getContentPane().add(this);
+      //this.setBackground(Color.white);
+    //  this.setFocusPainted(false);
+    //  this.setBorderPainted(false);
+     // this.setEnabled(false);
+
+
     }
 
     @Override
     protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        g.setColor(Color.RED);
-        g.fillOval(x,y,20,20);
+       if(flag) {super.paintComponent(g);
 
+            flag=false;}
+       // super.paintComponent(g);
+
+       if(stepY<0) g.setColor(Color.BLUE);
+       else if(stepY>0) g.setColor(Color.RED);
+        g.fillRect(x, y, 20, 20);
         timer.start();
 
     }
@@ -37,15 +56,21 @@ public class MovingRectangle extends JPanel implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        if(x > 480||x<0) dx=-dx ;
-        if(y>480||y<0) dy=-dy;
-         x=x+dx;
-        y=y+dy;
+        if(x > this.getWidth()-20||x<0){ stepX =-stepX;
+            if(y>=this.getHeight()-20) stepY =-stepY;
+            y=y+ stepY;
+        }
+        if(y>this.getHeight()-20||y<0){ stepY =-stepY;
+            y=y+ stepY;
+          flag=true;}
+         x=x+ stepX;
+
         repaint();
     }
     public static void main(String[] args)
     {
      new MovingRectangle();
     }
+
 }
 
