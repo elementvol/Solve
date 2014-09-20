@@ -1,1 +1,66 @@
-This file was created by IntelliJ IDEA 12.1.4 for binding GitHub repository
+#include <iostream>
+#include <string>
+using namespace std;
+void task1()
+{
+    int n ,a,b;
+    int countOfMaterial=0;
+     cin>>n>>a>>b;
+    for(int i = 0 ; i < n; i++)
+    {
+        countOfMaterial = countOfMaterial+a*b;
+    }
+    cout<<countOfMaterial*2<<endl;
+}
+void task2()
+{
+    int a,  b;
+    int countOfFuses=0;
+    cin>>a>>b;
+    for(int i = a; i <=b;i++)
+    {
+        if(i%2!=0) countOfFuses++;
+    }
+    cout<<countOfFuses<<endl;
+}
+void task3()
+{
+    int length;
+    int countOfDigits=1;
+    string input;
+    string output;
+    cin>>length>>input;
+
+
+
+    for(int i= 0 ; i < length-1; i++)
+    {
+
+      if(input[i] == input[i+1])countOfDigits++;
+      if(input[i] != input[i+1])
+      {
+
+        output=output+to_string(countOfDigits)+input[i];
+
+      }
+    }
+    cout<<output;
+
+}
+void task4()
+{
+
+}
+void task5()
+{
+
+}
+int main()
+{
+//task1();
+//task2();
+task3();
+return 0;
+}
+
+
