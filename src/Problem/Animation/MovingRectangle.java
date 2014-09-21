@@ -41,14 +41,15 @@ public class MovingRectangle extends JPanel implements ActionListener{
 
     @Override
     protected void paintComponent(Graphics g) {
-       if(flag) {super.paintComponent(g);
+     super.paintComponent(g);
+     /*  if(flag) {super.paintComponent(g);
 
-            flag=false;}
+            flag=false;}*/
        // super.paintComponent(g);
-
-       if(stepY<0) g.setColor(Color.BLUE);
-       else if(stepY>0) g.setColor(Color.RED);
-        g.fillRect(x, y, 20, 20);
+        g.setColor(Color.RED);
+      // if(stepY<0) g.setColor(Color.BLUE);
+      // else if(stepY>0) g.setColor(Color.RED);
+        g.fillOval(x, y, 20, 20);
         timer.start();
 
     }

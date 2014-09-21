@@ -35,7 +35,8 @@ public class Solution {
          } */
         for(int i = 0 ; i < /*(int)(Math.random()*10+15)*/4;i++)
         {
-          list.add  ( new Point(new BigDecimal(Math.random()*11 - 5).setScale(1, RoundingMode.UP).doubleValue(),new BigDecimal(Math.random()*11 - 5).setScale(1,RoundingMode.UP).doubleValue()));
+          list.add  ( new Point(new BigDecimal(Math.random()*11 - 5).setScale(1, RoundingMode.UP).doubleValue(),
+                      new BigDecimal(Math.random()*11 - 5).setScale(1,RoundingMode.UP).doubleValue()));
         }
 
          for (Point point :list)
@@ -56,18 +57,23 @@ public class Solution {
 
        // System.out.println(new Triangle(new Point(1,1),new Point(1,2),new Point (3,2)).consistsPoint(new Point(3,1)));
        }
-      public static void maxCountOfPointsConsists(ArrayList<Triangle> triangles , ArrayList<Point> points)
+      public static void maxCountOfPointsConsists(ArrayList<Triangle> triangles ,
+                                                  ArrayList<Point> points)
        {
 
            int maxCount=triangles.get(0).pointsInside(points);
            int indexOfTriangle=0;
            for (int i = 1 ; i < triangles.size(); i++)
            {
-              if(triangles.get(i).pointsInside(points)>maxCount){ maxCount=triangles.get(i).pointsInside(points);
+              if(triangles.get(i).pointsInside(points)>maxCount)
+              {
+                  maxCount=triangles.get(i).pointsInside(points);
                   indexOfTriangle = i;
               }
            }
-           System.out.println("Maximum of points consists: "+triangles.get(indexOfTriangle)+" Count of points inside: "+maxCount);
+           System.out.println("Maximum of points consists: "
+                                 +triangles.get(indexOfTriangle)+
+                             " Count of points inside: "+maxCount);
 
 
 
