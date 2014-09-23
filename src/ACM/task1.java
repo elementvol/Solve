@@ -30,27 +30,19 @@ public class task1 {
 
     for(int i = 0 ; i < n ;i++)
     {
-      if(input.contains(a-input.get(i)))
-        {
-          A.add(a-input.get(i)) ;
+          A.add(a-input.get(i));
           A.add(input.get(i));
-        }
-
-
+          B.add(input.get(i));
+          B.add(b-input.get(i));
 
     }
-   for(int i = 0 ; i< n ;i++)
-   {
-       if(input.contains(b-input.get(i)))
-       {
-           B.add(b-input.get(i));
-           B.add(input.get(i));
-       }
-   }
+
+
 
         ArrayList<Integer> list = new ArrayList<Integer>(A);
         list.addAll(B);
-     if(!equation(input,list)) System.out.println("NO");
+        list.retainAll(input);
+     if(list.size()!=input.size()) System.out.println("NO");
 
     else
         {
